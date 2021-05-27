@@ -1,0 +1,45 @@
+.Board {
+    height: 100%;
+    display: flex;
+	flex-direction: row;
+	padding-bottom: 1vh;
+	padding-top: 1vh;	
+	margin: 0;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+    overflow-x: auto;
+}
+ 
+.Stage {
+  background: #dfe3e6;
+  min-width: 20vw;
+  height: fit-content;
+  margin: 10px;
+  margin-right: 0;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.Stage-Title {
+  cursor: pointer;
+  padding: 10px;
+  overflow-wrap: break-word;
+}
+.Task {
+  position: relative;
+  cursor: pointer;
+  background: white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 0 rgba(9, 45, 66, 0.25);
+  font-size: 15px;
+  overflow-wrap: break-word;
+  min-height: 18px;
+}
+
+.Task:hover {
+  background: #f5f6f7;
+}

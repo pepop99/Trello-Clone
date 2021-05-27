@@ -1,7 +1,6 @@
 import { createStore } from 'redux'
 import reducers from './reducers/index'
 import fakeAPI from './fakeAPI'
-import uniqid from 'uniqid'
 import store_test from './store_test'
 
 const loadLocalState = () => {
