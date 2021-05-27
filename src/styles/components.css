@@ -43,3 +43,22 @@
 .Task:hover {
   background: #f5f6f7;
 }
+
+.Toggle-Add-Stage {
+    cursor: pointer;
+    padding: 10px;
+    color: #6b808c;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Toggle-Add-Stage:hover {
+    background-color: rgba(9, 45, 66, 0.13);
+    color: #17394d;
+    text-decoration: underline;
+  }
+  
+  .Toggle-Add-Stage ion-icon {
+    margin-right: 2px;
+  }
