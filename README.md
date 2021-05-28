@@ -18,7 +18,7 @@ npm start
 - Since both stages and tasks needed to be moved, simple array indexing was not enough. Unique ids with the help of [uniqid](https://www.npmjs.com/package/uniqid) were generated and were used to track which component belonged where.
 
 ## Caveats
-- Although the app is responsive and is designed to work on all devices, but due to the limitation of [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd), the drag and drop feature of stages and tasks might not work on touch screen devices.
+- Although the app is responsive and is designed to work on all devices, but due to the limitation of [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd), the drag and drop feature of stages and tasks might not work on some touch screen devices.
 
 ## Tech/framework used
 <b>Built with</b>
