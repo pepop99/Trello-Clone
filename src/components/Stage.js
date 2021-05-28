@@ -12,7 +12,7 @@ const changeTitle = () => {
 
 const Stage = (props) => {
     const {stage} = props;
-
+    const [editingTitle, toggleEditingTitle] = useState(false);
     const [addingTask, toggleState] = useState(false);
     
     const toggleTaskAdd = () => {
@@ -31,9 +31,37 @@ const Stage = (props) => {
         })
     };
 
+    const editStageTitle = async (newTitle) => {
+        const {stageId, dispatch} = props;
+        toggleEditingTitle(!editingTitle);
+
+        dispatch({
+            type: 'RENAME_STAGE',
+            payload: {
+                stageId, stageTitle: newTitle
+            }
+        });
+    };
+
+    const deleteStage = async () => {
+        const {stageId, stage, dispatch} = props;
+        toggleEditingTitle(!editingTitle);
+
+        dispatch({
+            type: 'DELETE_STAGE',
+            payload: {
+                stageId, tasks: stage.tasks
+            }
+        })
+    }
     return(
         <div className="Stage">
-            <div className="Stage-Title" onClick={changeTitle()} >{stage.title}</div>
+            {!editingTitle ? (
+                    <div className="Stage-Title" onClick={() => toggleEditingTitle(!editingTitle)} >{stage.title}</div>
+                    ) : (
+                    <TaskAdd onSave={editStageTitle} onCancel={() => toggleEditingTitle(!editingTitle)} onDelete={deleteStage} isDeleting={true}/>
+                    )}
+            
             {stage.tasks && stage.tasks.map((taskId, index) => {
                 return <Task stageId={stage.id} taskId={taskId} index={index} />
             })}
