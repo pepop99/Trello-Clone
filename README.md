@@ -1,5 +1,6 @@
 ## Trello Clone
-This project provides a basic implementation of Trello.
+This project provides a basic implementation of Trello. [Live Demo](https://pepop99.github.io/ZuddlProject/)
+
 
 ## Motivation
 This project has been created as an exercise task for the position of SDE intern at Zuddl.
@@ -16,13 +17,55 @@ npm start
 - Save state function was called too many times, thereby reducing the performance of the app. Thus [lodash.throttle](https://www.npmjs.com/package/lodash.throttle) has been used to prevent this.
 - Since both stages and tasks needed to be moved, simple array indexing was not enough. Unique ids with the help of [uniqid](https://www.npmjs.com/package/uniqid) were generated and were used to track which component belonged where.
 
-
 ## Caveats
 - Although the app is responsive and is designed to work on all devices, but due to the limitation of [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd), the drag and drop feature of stages and tasks does not work on touch screen devices, since it can only handle mouse events.
 
 ## Tech/framework used
 <b>Built with</b>
 - [React](https://reactjs.org/)
+
+## Local Storage Representation
+```json
+﻿{
+  "board": {
+    "stages": [
+      "kp8tbcxl",
+      "kp8tbcxp"
+    ]
+  },
+  "stage": {
+    "kp8tbcxl": {
+      "id": "kp8tbcxl",
+      "title": "Resources",
+      "tasks": [
+        "kp8tbcxm",
+        "kp8tbcxn"
+      ]
+    },
+    "kp8tbcxp": {
+      "id": "kp8tbcxp",
+      "title": "Todo",
+      "tasks": [
+        "kp8tbcxq"
+      ]
+    }
+  },
+  "task": {
+    "kp8tbcxm": {
+      "id": "kp8tbcxm",
+      "text": "Financials"
+    },
+    "kp8tbcxn": {
+      "id": "kp8tbcxn",
+      "text": "2017 Goals"
+    },
+    "kp8tbcxq": {
+      "id": "kp8tbcxq",
+      "text": "Taco drone"
+    }
+  }
+}
+```
 
 ## Features
 - Add new stages.
