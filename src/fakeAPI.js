@@ -91,7 +91,7 @@ const fakeAPI = (store) => {
         payload: {
             stageId: thirdStageId,
             taskId: uniqid(),
-            taskText: 'Safe Moono'
+            taskText: 'Safe Moon'
         }
     });
     //adding fourth dummy stage

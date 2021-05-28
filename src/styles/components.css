@@ -12,36 +12,36 @@
 }
  
 .Stage {
-  background: #dfe3e6;
-  min-width: 20vw;
-  height: fit-content;
-  margin: 10px;
-  margin-right: 0;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #dfe3e6;
+    min-width: 20vw;
+    height: fit-content;
+    margin: 10px;
+    margin-right: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .Stage-Title {
-  cursor: pointer;
-  padding: 10px;
-  overflow-wrap: break-word;
+    cursor: pointer;
+    padding: 10px;
+    overflow-wrap: break-word;
 }
 .Task {
-  position: relative;
-  cursor: pointer;
-  background: white;
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 0 rgba(9, 45, 66, 0.25);
-  font-size: 15px;
-  overflow-wrap: break-word;
-  min-height: 18px;
+    position: relative;
+    cursor: pointer;
+    background: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 0 rgba(9, 45, 66, 0.25);
+    font-size: 15px;
+    overflow-wrap: break-word;
+    min-height: 18px;
 }
 
 .Task:hover {
-  background: #f5f6f7;
+    background: #f5f6f7;
 }
 
 .Toggle-Add-Task {
@@ -51,14 +51,68 @@
     border-radius: 0 0 10px 10px;
     display: flex;
     align-items: center;
-  }
+}
   
-  .Toggle-Add-Task:hover {
+.Toggle-Add-Task:hover {
     background-color: rgba(9, 45, 66, 0.13);
     color: #17394d;
     text-decoration: underline;
+}
+
+.Toggle-Add-Task ion-icon {
+    margin-right: 2px;
+}
+
+.Edit-Task {
+    min-height: 50px;
+}
+
+.Task-Card .Task:hover {
+    background: white;
+}
+  
+  .Edit-Task-Textarea {
+    border: none;
+    resize: none;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .Edit-Buttons {
+    display: flex;
   }
   
-  .Toggle-Add-Task ion-icon {
-    margin-right: 2px;
+  .Edit-Button {
+    cursor: pointer;
+    box-shadow: 0 1px 0 0 #3f6f21;
+    width: fit-content;
+    margin: 0 5px 10px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    outline: none;
+  }
+  
+  .Edit-Button:hover {
+    opacity: 0.7;
+  }
+  
+  .Edit-Icon {
+    cursor: pointer;
+    width: 1vw;
+    /* height: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 1px;
+    color: rgba(0, 0, 0, 0.5);
+    background: #f5f6f7;
+    opacity: 0.9;
+  }
+  
+  .Edit-Icon:hover {
+    opacity: 1;
+    background: rgba(220, 220, 220, 1);
   }
