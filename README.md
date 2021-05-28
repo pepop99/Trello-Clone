@@ -1,4 +1,4 @@
-## Project title
+## Trello Clone
 This project provides a basic implementation of Trello.
 
 ## Motivation
