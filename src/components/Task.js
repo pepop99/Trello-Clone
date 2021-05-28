@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import '../styles/components.css';
 import EditField from './EditField';
+import { Draggable } from "react-beautiful-dnd";
 
 const Task = (props) => {
-    const {task} = props;
+    const {task, index} = props;
     const [editing, toggleEditing] = useState(false);
 
     const editTask = async (text) => {
@@ -28,9 +29,20 @@ const Task = (props) => {
 
     if(!editing){
         return(
-            <div className='Task' onClick={() => toggleEditing(!editing)}> 
+            <Draggable draggableId={task.id} index={index}>
+            {(provided, snapshot) => (
+                <div
+                ref={provided.innerRef}
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                className='Task' 
+                onClick={() => toggleEditing(!editing)}
+                > 
                 {task.text}
-            </div>
+                </div>
+            )}
+            </Draggable>
+            
         );
     }
     else{

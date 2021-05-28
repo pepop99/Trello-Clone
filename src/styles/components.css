@@ -5,18 +5,18 @@
 	padding-bottom: 1vh;
 	padding-top: 1vh;	
 	margin: 0;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: space-around;
-    overflow-x: auto;
+	/* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+	/* align-content: space-around; */
+    /* overflow-x: auto; */
 }
  
 .Stage {
-    background: #dfe3e6;
+    background: #e2e5ed;
     min-width: 20vw;
     height: fit-content;
     margin: 10px;
-    margin-right: 0;
+    /* margin-right: 0; */
     border-radius: 2px;
     border: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -25,6 +25,9 @@
     cursor: pointer;
     padding: 10px;
     overflow-wrap: break-word;
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
 }
 .Task {
     position: relative;
@@ -48,7 +51,7 @@
     cursor: pointer;
     padding: 10px;
     color: #6b808c;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 2px 2px;
     display: flex;
     align-items: center;
 }
@@ -75,6 +78,7 @@
     border: none;
     resize: none;
     outline: none;
+    width: 100%;
     font-size: 15px;
   }
 
@@ -88,7 +92,7 @@
     width: fit-content;
     margin: 0 5px 10px;
     padding: 6px 12px;
-    border-radius: 5px;
+    border-radius: 2px;
     color: white;
     font-weight: 700;
     outline: none;
@@ -105,7 +109,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 2px;
     margin: 1px;
     color: rgba(0, 0, 0, 0.5);
     background: #f5f6f7;

@@ -30,7 +30,7 @@ const Board = (props) => {
 
         if (source.index !== destination.index || source.droppableId !== destination.droppableId) {
             dispatch({
-              type: "MOVE_STAGE",
+              type: "MOVE_TASK",
               payload: {
                 source: source.droppableId,
                 target: destination.droppableId,

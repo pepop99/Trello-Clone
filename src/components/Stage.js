@@ -69,18 +69,20 @@ const Stage = (props) => {
                 return <Task stageId={stage.id} taskId={taskId} index={index} key={taskId}/>
                 })}
                 {provided.placeholder}
-                </div>
-            )}
-            </Droppable>
-            
-            {addingTask ? (
+
+                {addingTask ? (
                     // console.log('djkf')
                     <EditField onSave={addTask} onCancel={() => toggleAddingTask(!addingTask)}/>
                     ) : (
                     <div className="Toggle-Add-Task" onClick={() => toggleAddingTask(!addingTask)}>
                         Add a Task
                     </div>
-                    )}
+                )}
+                </div>
+            )}
+            </Droppable>
+            
+            
         </div>
         )}
         </Draggable>
