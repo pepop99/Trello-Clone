@@ -17,7 +17,7 @@ const loadLocalState = () => {
     }
 };
 
-const saveState = (state) => {
+const saveState = async (state) => {
     try{
         localStorage.setItem("state", JSON.stringify(state));
     }
@@ -31,6 +31,7 @@ const store = createStore(reducers, localState);
 // console.log(store.getState());
 if(store.getState().board.stages.length === 0){
     fakeAPI(store);
+    saveState(store.getState());
 }
 
 //testing data

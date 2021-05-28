@@ -1,6 +1,13 @@
-// import uniqid from 'uniqid'
+import uniqid from 'uniqid'
 
 const store_test = (store) => {
+    // store.dispatch({
+    //     type: 'MOVE_STAGE',
+    //     payload: {
+    //         from: 2,
+    //         to: 0,
+    //     }
+    // })
     // store.dispatch({
     //     type: 'ADD_TASK',
     //     payload: {
