@@ -44,7 +44,7 @@
   background: #f5f6f7;
 }
 
-.Toggle-Add-Stage {
+.Toggle-Add-Task {
     cursor: pointer;
     padding: 10px;
     color: #6b808c;
@@ -53,12 +53,12 @@
     align-items: center;
   }
   
-  .Toggle-Add-Stage:hover {
+  .Toggle-Add-Task:hover {
     background-color: rgba(9, 45, 66, 0.13);
     color: #17394d;
     text-decoration: underline;
   }
   
-  .Toggle-Add-Stage ion-icon {
+  .Toggle-Add-Task ion-icon {
     margin-right: 2px;
   }

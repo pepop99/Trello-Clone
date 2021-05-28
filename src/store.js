@@ -2,6 +2,7 @@ import { createStore } from 'redux'
 import reducers from './reducers/index'
 import fakeAPI from './fakeAPI'
 import store_test from './store_test'
+import throttle from "lodash.throttle";
 
 const loadLocalState = () => {
     try{
@@ -35,7 +36,12 @@ if(store.getState().board.stages.length === 0){
 //testing data
 store_test(store);
 
-store.subscribe = () => {
+// store.subscribe = () => {
+//     saveState(store.getState());
+// };
+store.subscribe(
+  throttle(() => {
     saveState(store.getState());
-};
+  }, 1000)
+);
 export default store;
