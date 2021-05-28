@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ZuddlProject/static/css/main.5a8ffba3.chunk.css",
+    "main.css": "/ZuddlProject/static/css/main.e8bdcc92.chunk.css",
     "main.js": "/ZuddlProject/static/js/main.6d495975.chunk.js",
     "main.js.map": "/ZuddlProject/static/js/main.6d495975.chunk.js.map",
     "runtime-main.js": "/ZuddlProject/static/js/runtime-main.b97f8462.js",
@@ -12,13 +12,13 @@
     "index.html": "/ZuddlProject/index.html",
     "service-worker.js": "/ZuddlProject/service-worker.js",
     "service-worker.js.map": "/ZuddlProject/service-worker.js.map",
-    "static/css/main.5a8ffba3.chunk.css.map": "/ZuddlProject/static/css/main.5a8ffba3.chunk.css.map",
+    "static/css/main.e8bdcc92.chunk.css.map": "/ZuddlProject/static/css/main.e8bdcc92.chunk.css.map",
     "static/js/2.68b8affb.chunk.js.LICENSE.txt": "/ZuddlProject/static/js/2.68b8affb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b97f8462.js",
     "static/js/2.68b8affb.chunk.js",
-    "static/css/main.5a8ffba3.chunk.css",
+    "static/css/main.e8bdcc92.chunk.css",
     "static/js/main.6d495975.chunk.js"
   ]
 }
