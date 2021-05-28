@@ -1,5 +1,4 @@
-import React, { Component, useState } from "react";
-import TextareaAutosize from "react-textarea-autosize";
+import React from "react";
 import '../styles/components.css';
 
 const Button = (props) => {

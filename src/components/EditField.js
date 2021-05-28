@@ -1,9 +1,9 @@
-import React, { Component, useState } from "react";
+import React, {useState} from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import '../styles/components.css';
 import Button from './Button';
 
-const TaskAdd = (props) => {
+const EditField = (props) => {
     const [text, setText] = useState(props.prevText || "");
 
     const onCarriage = (key) => {
@@ -29,6 +29,6 @@ const TaskAdd = (props) => {
     );
 };
 
-export default TaskAdd;
+export default EditField;
 
 

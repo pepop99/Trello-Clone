@@ -1,27 +1,19 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import Task from './Task';
 import '../styles/components.css';
 import uniqid from 'uniqid'
-import TaskAdd from './TaskAdd';
-
-const changeTitle = () => {
-
-};
-
+import EditField from './EditField';
 
 const Stage = (props) => {
     const {stage} = props;
     const [editingTitle, toggleEditingTitle] = useState(false);
-    const [addingTask, toggleState] = useState(false);
-    
-    const toggleTaskAdd = () => {
-        toggleState(!addingTask);
-    }
+    const [addingTask, toggleAddingTask] = useState(false);
+
 
     const addTask = async (taskText) => {
         const {stageId, dispatch} = props;
-        toggleTaskAdd();
+        toggleAddingTask(!addingTask);
         const taskId = uniqid();
         dispatch({
             type: 'ADD_TASK',
@@ -59,7 +51,7 @@ const Stage = (props) => {
             {!editingTitle ? (
                     <div className="Stage-Title" onClick={() => toggleEditingTitle(!editingTitle)} >{stage.title}</div>
                     ) : (
-                    <TaskAdd onSave={editStageTitle} onCancel={() => toggleEditingTitle(!editingTitle)} onDelete={deleteStage} isDeleting={true}/>
+                    <EditField onSave={editStageTitle} onCancel={() => toggleEditingTitle(!editingTitle)} onDelete={deleteStage} isDeleting={true} prevText={stage.title}/>
                     )}
             
             {stage.tasks && stage.tasks.map((taskId, index) => {
@@ -67,9 +59,9 @@ const Stage = (props) => {
             })}
             {addingTask ? (
                     // console.log('djkf')
-                    <TaskAdd onSave={addTask} onCancel={toggleTaskAdd}/>
+                    <EditField onSave={addTask} onCancel={() => toggleAddingTask(!addingTask)}/>
                     ) : (
-                    <div className="Toggle-Add-Task" onClick={() => toggleTaskAdd()}>
+                    <div className="Toggle-Add-Task" onClick={() => toggleAddingTask(!addingTask)}>
                         Add a Task
                     </div>
                     )}

@@ -1,8 +1,7 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import '../styles/components.css';
-import editIcon from '../edit.svg';
-import TaskAdd from './TaskAdd';
+import EditField from './EditField';
 
 const Task = (props) => {
     const {task} = props;
@@ -36,7 +35,7 @@ const Task = (props) => {
     }
     else{
         return(
-            <TaskAdd onSave={editTask} onCancel={() => toggleEditing(!editing)} prevText={task.text} onDelete={deleteTask} isDeleting={true}/>
+            <EditField onSave={editTask} onCancel={() => toggleEditing(!editing)} prevText={task.text} onDelete={deleteTask} isDeleting={true}/>
         );
     }
 }
