@@ -10,7 +10,6 @@ const Stage = (props) => {
     const [editingTitle, toggleEditingTitle] = useState(false);
     const [addingTask, toggleAddingTask] = useState(false);
 
-
     const addTask = async (taskText) => {
         const {stageId, dispatch} = props;
         toggleAddingTask(!addingTask);
@@ -45,7 +44,9 @@ const Stage = (props) => {
                 stageId, tasks: stage.tasks
             }
         })
-    }
+    };
+
+
     return(
         <div className="Stage">
             {!editingTitle ? (

@@ -12,12 +12,14 @@ const EditField = (props) => {
             props.onSave(text);
         }
     }
+
+    const placeholder = props.placeholder || "Enter the task";
     return(
         <div className='Edit-Task'>
             <div className='Task'>
                 <TextareaAutosize 
                     autoFocus
-                    placeholder={"Enter the task"}
+                    placeholder={placeholder}
                     value={text}
                     onKeyDown={onCarriage}
                     onChange={(ev) => setText(ev.target.value)}
